@@ -1,7 +1,15 @@
 name: Node CI
 
-on: [push]
+on:
+  push:
+    # branches-ignore:
+    #   - "ci-workflow"
+    #   - "docker-workflow"
+    paths:
+      - "**Dockerfile**"
+name: Node CI
 
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,8 +30,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-lastest, windows-2016]
-        node-version: [8.x, 10.x]
-
+        node-version: [10, 12]
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
