@@ -1,3 +1,5 @@
+Completed GitHub Actions Package Registry course from GitHub Learning Lab
+
 # Tic Tac Toe Game
 
 Let's learn about CD while using GitHub Actions and the GitHub Package Registry!
